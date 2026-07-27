@@ -25,7 +25,7 @@ body {
     overflow: hidden;
 }
 
-/* Texto de contorno (transparente por dentro) */
+/* Texto de contorno (transparente no centro) */
 .banner::before {
     content: attr(data-text);
     position: absolute;
@@ -37,7 +37,7 @@ body {
     z-index: 1;
 }
 
-/* Camada da imagem revelada pelo mouse */
+/* Camada da imagem com revelação via lanterna */
 .banner::after {
     content: attr(data-text);
     position: absolute;
@@ -50,15 +50,14 @@ body {
     z-index: 2;
     clip-path: circle(0px at var(--x) var(--y));
     transition: clip-path 0.1s ease-out;
-    /* Link direto para a imagem do Pexels */
-    background: url('https://images.pexels.com/photos/38135825/pexels-photo-38135825.jpeg') no-repeat center center;
+    background: url('pexels-delot-38135825.jpg') no-repeat center center;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Define a área visível do efeito da lanterna ao passar o mouse */
+/* Raio de alcance do efeito de revelação ao passar o cursor */
 .banner:hover::after {
     clip-path: circle(250px at var(--x) var(--y));
 }
