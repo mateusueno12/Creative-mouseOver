@@ -50,7 +50,7 @@ body {
     z-index: 2;
     clip-path: circle(0px at var(--x) var(--y));
     transition: clip-path 0.1s ease-out;
-    background: url('estatua.jpg') no-repeat center center;
+    background: url('pexels-delot-38135825.jpg') no-repeat center center;
     background-size: cover;
     display: flex;
     justify-content: center;
